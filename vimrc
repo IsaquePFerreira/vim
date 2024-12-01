@@ -57,7 +57,7 @@ set nolist
 set listchars=tab:›-,space:·,trail:⋯,eol:↲
 set fillchars=vert:│,fold:\ ,eob:~,lastline:@
 set complete+=kspell
-set completeopt=menuone,longest
+set completeopt=menuone,longest,noinsert
 set shortmess+=c
 
 autocmd Filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

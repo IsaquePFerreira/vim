@@ -29,7 +29,6 @@ set signcolumn=no
 set hidden
 set confirm
 set guicursor=
-set clipboard+=unnamedplus
 
 set path+=**
 set nobackup
@@ -95,11 +94,6 @@ nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <leader>nu :set number!<cr>
 nnoremap <leader>s :set spell!<cr>
 nnoremap <leader>l :set list!<cr>
-
-nnoremap <leader>v <c-v>
-
-vnoremap <c-c> "*y :let @+=@*<cr>
-nnoremap <c-v> "+P
 
 set omnifunc=syntaxcomplete#Complete
 

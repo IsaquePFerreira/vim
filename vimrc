@@ -5,8 +5,7 @@ if has('termguicolors')
    set termguicolors
 endif
 set background=dark
-colorscheme everforest
-" colorscheme habamax
+colorscheme minimalist
 syntax on
 filetype plugin indent on
 
@@ -18,7 +17,8 @@ set wildmenu
 set wildmode=longest,full
 set wildoptions=pum
 set pumheight=10
-set showtabline=2
+set wildignore=*.png,*.jpg,*.jpeg,*.class
+set showtabline=1
 set laststatus=2
 set showcmd
 set showmode
@@ -85,15 +85,27 @@ nnoremap <leader>n :tabedit<space>
 
 nnoremap <esc> <cmd>nohlsearch<cr>
 
-nnoremap <C-p> :Files<CR>
-nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>h :History<CR>
+nnoremap <leader>tn :set number!<cr>
+nnoremap <leader>ts :set spell!<cr>
+nnoremap <leader>tl :set list!<cr>
 
-nnoremap <leader>e :NERDTreeToggle<CR>
+inoremap '' ''<left>
+inoremap "" ""<left>
+inoremap () ()<left>
+inoremap <> <><left>
+inoremap [] []<left>
+inoremap {} {}<left>
+inoremap {<cr> {<cr><cr>}<c-o>k<c-t>
+inoremap ({ ({  })<c-o>2h
+inoremap (( ((  ))<c-o>2h
+inoremap [[ [[  ]]<c-o>2h
 
-nnoremap <leader>nu :set number!<cr>
-nnoremap <leader>s :set spell!<cr>
-nnoremap <leader>l :set list!<cr>
+vnoremap " c""<esc>P
+vnoremap ' c''<esc>P
+vnoremap ( c()<esc>P
+vnoremap [ c[]<esc>P
+vnoremap { c{}<esc>P
+vnoremap ` c``<esc>P
 
 set omnifunc=syntaxcomplete#Complete
 
